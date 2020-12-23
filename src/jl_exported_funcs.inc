@@ -118,8 +118,6 @@
     XX(jl_copy_ast) \
     XX(jl_copy_code_info) \
     XX(jl_copysign_float) \
-    XX(jl_cpuid) \
-    XX(jl_cpuidex) \
     XX(jl_cpu_pause) \
     XX(jl_cpu_threads) \
     XX(jl_cpu_wake) \
