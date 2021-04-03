@@ -272,7 +272,7 @@ setindex!(v::Pairs, value, key) = (getfield(v, :data)[key] = value; v)
 get(v::Pairs, key, default) = get(getfield(v, :data), key, default)
 get(f::Base.Callable, v::Pairs, key) = get(f, getfield(v, :data), key)
 if getproperty !== getfield
-    getproperty(::Pairs, ::Symbol) = error("foobar")
+    @deprecate getproperty(x::Pairs, s::Symbol) getfield(x, s)
 end
 
 # zip
